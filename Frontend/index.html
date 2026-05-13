@@ -73,6 +73,100 @@
     }
 }
 
+/*
+ <!-- =========================
+     NAVIGATION BAR START
+========================= -->
+
+
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR WRAPPER */
+.navbar {
+    background-color: #f8f9fa; /* very light gray */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* LOGO */
+.navbar .logo img {
+    height: 45px;
+    width: auto;
+}
+
+/* NAV MENU */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV ITEMS */
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+    padding: 5px 0;
+}
+
+/* HOVER EFFECT */
+.nav-links li a:hover {
+    color: #4aa3df;
+}
+
+/* ACTIVE STYLE */
+.nav-links li a.active {
+    color: #4aa3df;
+    border-bottom: 2px solid #4aa3df;
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
 </style>
 </head>
 
@@ -102,6 +196,69 @@
 <!-- =========================
      TOP HEADER BAR END
 ========================= -->
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="dhaka-wasa.png" alt="Dhaka WASA Logo">
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#notice">Notice Board</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#tender">Tender Info</a></li>
+    </ul>
+
+</nav>
+<!-- =========================
+     NAVIGATION BAR END
+========================= -->
+<!-- ==================================================
+NEW PORTION START = DEMO SECTIONS
+================================================== 
+
+<section id="home">
+<h1>HOME SECTION</h1>
+</section>
+
+<section id="notice">
+<h1>NOTICE BOARD SECTION</h1>
+</section>
+
+<section id="product">
+<h1>PRODUCT SECTION</h1>
+</section>
+
+<section id="gallery">
+<h1>GALLERY SECTION</h1>
+</section>
+
+<section id="tender">
+<h1>TENDER INFO SECTION</h1>
+</section>-->
+
+<!-- ==================================================
+NEW PORTION END
+================================================== -->
+
+
+<!-- ==================================================
+NEW PORTION START = JAVASCRIPT
+================================================== -->
+
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
+<!-- ==================================================
+NEW PORTION END
+================================================== -->
+
 
 </body>
 </html>
