@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<title>Top Header Bar</title>
+
+<style>
+
+/* =========================
+   TOP HEADER BAR STYLES
+========================= */
+
+.top-bar {
+    background-color: #4aa3df; /* light blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+}
+
+/* LEFT SIDE SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Hover animation for social icons */
+.social-icons a:hover {
+    color: #ffdd57;
+    transform: translateY(-2px);
+}
+
+/* RIGHT SIDE CONTACT INFO */
+.contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* ICON STYLE */
+.contact-info i {
+    margin-right: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP HEADER BAR START
+========================= -->
+<div class="top-bar">
+
+    <!-- LEFT SIDE: SOCIAL MEDIA ICONS -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/mushiur.rehman.9" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/mushiur_rehman/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- RIGHT SIDE: CONTACT INFO (STATIC TEXT ONLY) -->
+    <div class="contact-info">
+        <div><i class="fas fa-phone"></i> +880 1728201634</div>
+        <div><i class="fas fa-envelope"></i> mushiurrehman1610917670@gmail.com</div>
+    </div>
+
+</div>
+<!-- =========================
+     TOP HEADER BAR END
+========================= -->
+
+</body>
+</html>
