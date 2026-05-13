@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Design</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e9f2f9, #f7fbff);
+}
+
+/* LOGIN CARD */
+.login-box {
+    width: 420px;
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+/* TOP HEADER */
+.header {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    background: #e6f2fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+/* SUB TEXT */
+.sub-text {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* FORM */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 13px;
+    color: #444;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6e4f0;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4FA3D1;
+    box-shadow: 0 0 0 3px rgba(79,163,209,0.2);
+}
+
+/* PASSWORD */
+.password-wrapper {
+    position: relative;
+}
+
+.toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 13px;
+    color: #666;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4FA3D1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #3b8bb8;
+}
+
+/* LINK */
+.forgot {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.forgot a {
+    font-size: 13px;
+    color: #4FA3D1;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 480px){
+    .login-box {
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <!-- TOP HEADER (AIUB STYLE) -->
+    <div class="header">
+
+    <div class="logo">
+        <img src="dhaka-wasa.png" alt="logo">
+    </div>
+
+    <div class="header-text">
+        <div class="company-name">Dhaka WASA</div>
+        <div class="sub-text">Sign in with your organization ID</div>
+    </div>
+
+    </div>
+
+    <!-- FORM -->
+    <form>
+
+        <div class="input-group">
+            <label>User ID</label>
+            <input type="text" placeholder="Enter User ID" required>
+        </div>
+
+        <div class="input-group password-wrapper">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <span class="toggle" onclick="togglePassword()">👁</span>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="forgot">
+            <a href="#">Can’t access your account?</a>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+function togglePassword() {
+    const p = document.getElementById("password");
+    p.type = (p.type === "password") ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
